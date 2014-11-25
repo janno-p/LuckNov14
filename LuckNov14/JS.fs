@@ -24,7 +24,7 @@ let compileAll () =
 
     let compileToFile (fileName, methodInfo) =
         let source = Compiler.Compile(Quotations.Expr.Call(methodInfo, []))
-        let wrapped = sprintf "$(document).ready(function() {\n%s\n});" source
+        let wrapped = sprintf "window.onload = function() {\n%s\n};" source
         let filePath = Path.Combine(outputDir, fileName)
         if not (Directory.Exists outputDir) then
             Directory.CreateDirectory(outputDir) |> ignore

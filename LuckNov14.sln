@@ -3,6 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{f2a71f9b-5d33-465a-a702-920d77279786}") = "LuckNov14", "LuckNov14\LuckNov14.fsproj", "{FE586942-8B07-4E32-B8DD-FA360635AAA9}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Files", "Solution Files", "{3FEDCA6F-FF33-477A-B8F7-8A1F881FEA75}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -13,6 +18,8 @@ Global
 		{FE586942-8B07-4E32-B8DD-FA360635AAA9}.Debug|x86.Build.0 = Debug|x86
 		{FE586942-8B07-4E32-B8DD-FA360635AAA9}.Release|x86.ActiveCfg = Release|x86
 		{FE586942-8B07-4E32-B8DD-FA360635AAA9}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = LuckNov14\LuckNov14.fsproj

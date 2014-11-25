@@ -16,10 +16,9 @@ let content = @"<!DOCTYPE html>
     <meta charset=""utf-8"" />
     <meta name=""viewport"" content=""width=device-width, initial-scale=1.0"" />
     <title>LuckNov14</title>
+    <script src=""/Scripts/phaser.min.js""></script>
 </head>
-<body style=""background-color: #ccc;"">
-    <script src=""https://code.jquery.com/jquery-2.1.1.min.js""></script>
-    <script src=""//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.2/raphael-min.js""></script>
+<body>
     <script src=""/Scripts/page.js""></script>
 </body>
 </html>"
@@ -27,7 +26,8 @@ let content = @"<!DOCTYPE html>
 let app : WebPart =
     choose [
         url "/page" >>= OK content
-        GET >>= url_regex "/Scripts/(.*)\.js$" >>= browse
+        GET >>= url_regex "/Scripts/(.*)\.js$" >>= browse'
+        GET >>= url_regex "/Images/(.*)\.png$" >>= browse'
         NOT_FOUND "Found no handlers"
     ]
 
