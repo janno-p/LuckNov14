@@ -25,4 +25,4 @@ let main () =
                   |> add "preload" (box preload)
                   |> add "create" (box create)
 
-    Phaser.Game.Create(800.0, 600.0, PhaserClass.AUTO, "", options)
+    Phaser.Game.Create(800.0, 600.0, Phaser_.AUTO, "", options)

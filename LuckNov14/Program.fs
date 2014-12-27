@@ -27,8 +27,13 @@ let app : WebPart =
     choose [
         url "/page" >>= OK content
         GET >>= url_regex "/Scripts/(.*)\.js$" >>= browse'
+        GET >>= url_regex "/Scripts/(.*)\.map$" >>= browse'
         GET >>= url_regex "/Images/(.*)\.png$" >>= browse'
         NOT_FOUND "Found no handlers"
     ]
 
-web_server default_config app
+let mime_types =
+  default_config.mime_types_map
+    >=> (function | ".map" -> Suave.Http.Writers.mk_mime_type "application/json" false | _ -> None)
+
+web_server { default_config with mime_types_map = mime_types } app

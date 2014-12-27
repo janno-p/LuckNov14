@@ -140,7 +140,7 @@ publish/
 !**/packages/build/
 # If using the old MSBuild-Integrated Package Restore, uncomment this:
 #!**/packages/repositories.config
-!**/packages/FunScript.TypeScript.Binding.phaser.2.1.3/
+!**/packages/FunScript.TypeScript.Binding.phaser.2.2.1/
 
 # Windows Azure Build Output
 csx/
